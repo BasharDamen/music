@@ -19,11 +19,28 @@ header{
 h1#logo{
     margin: 15px 30px;
     display: flex;
-    color: #b7b7b7;
+    color: #ffffff;
     text-transform: uppercase;
-    font: -webkit-control;
-    font-family: monospace;
+    font: menu;
     font-size: xxx-large;
+}
+
+#bck{
+    background-image: url(466700_wallpaper-music-vinyl-music-vintage-wallpapers_2560x1600_h.jpg);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+#bck::after{
+    content: "";
+    background: #383838;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
 }
 
 body nav ul {
@@ -41,11 +58,6 @@ body nav ul li{
     text-transform: uppercase;
 }
 
-main {
-    background-image: url(466700_wallpaper-music-vinyl-music-vintage-wallpapers_2560x1600_h.jpg);
-    background-attachment: local;
-    background-position: inherit;
-}
 
 section {
     background: linear-gradient(180deg, rgb(181 127 100 / 31%), #ba75464a);
@@ -55,43 +67,92 @@ h2 {
     margin: 10px 20px;
 }
 
-div#history {
-    background-color: #8e611d1a;
+div#history {    
     color: floralwhite;
-    filter: drop-shadow(1px 3px 2px black);
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
 }
 
 div#instru {
-    background-color: #8e611d1a;
     color: floralwhite;
-    filter: drop-shadow(1px 3px 2px black);
     display: flex;
-    align-items: baseline;
+    margin: 50px 0;
+    flex-direction: column;
+    justify-content: center;
 }
 
-  ul#inlink {
-      margin: 0 35px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      list-style: none;
-      font: menu;
-      font-size: large;
+
+
+.card {
+    height: 350px;
+    width: 200px;
+    box-shadow: 3px 3px 7px 2px #000000cf;
+    border-radius: 5px;
+    background: linear-gradient( 
+60deg
+ , #98613b, #3e220e);
 }
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.img-container {
+    height: 75%;
+    position: relative;
+}
+
+#violin {
+    background-image: url(violin.jpeg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#cello{
+    background-image: url(cello2.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#piano{
+    background-image: url(piano2.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.txt {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font: message-box;
+    font-size: larger;
+}
+
 
 div#affects {
-    background-color: #8e611d1a;
     color: floralwhite;
-    filter: drop-shadow(1px 3px 2px black);
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
 }
 
 p.article {
-    margin: inherit;
-    margin-right: 304px;
+    margin: 14px 40px;
     font-family: cursive;
 }
 
